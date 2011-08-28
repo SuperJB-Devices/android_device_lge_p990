@@ -1,12 +1,12 @@
 on init
     export TMPDIR /data/local/tmp
-    export PHONE_STORAGE /mnt/emmc
+    export PHONE_STORAGE /mnt/sdcard
 
 # Backward compatibility
     symlink /system/bin /bin
 
 # create mountpoints for internal "SD"
-    mkdir /mnt/emmc 0000 system system
+    mkdir /mnt/sdcard 0000 system system
 
 #20100722, taein.kim@lge.com, Add external security folder [START]
     mkdir /mnt/extsecure 0700 root root
