@@ -7,6 +7,7 @@ on init
 
 # create mountpoints for internal "SD"
     mkdir /mnt/sdcard 0000 system system
+    mkdir /mnt/sdcard/_ExternalSD 0000 system system
 
 #20100722, taein.kim@lge.com, Add external security folder [START]
     mkdir /mnt/extsecure 0700 root root
