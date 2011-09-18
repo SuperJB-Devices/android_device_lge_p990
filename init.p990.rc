@@ -84,6 +84,12 @@ on boot
     chown system system /sys/devices/platform/star_aat2870.0/lsensor_onoff
     chown system system /sys/devices/platform/star_aat2870.0/alc
 
+# light controls
+    chown system system /sys/class/leds/buttonpanel/brightness
+    chown system system /sys/class/leds/buttonpanel/enable
+    chown system system /sys/class/leds/buttonpanel/pulse
+    chown system system /sys/class/leds/buttonpanel/pulse_interval
+
     chmod 777 /dev/block/mmcblk0p3
 # kernel read permission
     chmod 644 /dev/block/mmcblk0p5

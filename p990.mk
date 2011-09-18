@@ -1,8 +1,5 @@
 $(call inherit-product, device/lge/star-common/star.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_eu.mk)
-
 # Inherit non-open-source blobs.
 $(call inherit-product-if-exists, vendor/lge/p990/p990-vendor.mk)
 
@@ -24,14 +21,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/prebuilt/wireless.ko:system/lib/modules/wireless.ko
-
-# This is a patched version of libicuuc to include the old symbols
-# needed by glgps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/libicuuc.so:system/lib/libicuuc.so
-
-PRODUCT_PACKAGES += \
-    gps.p990
 
 PRODUCT_NAME := p990
 PRODUCT_DEVICE := p990

@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \\
 # HAL
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/gralloc.tegra.so:system/lib/hw/gralloc.tegra.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/lights.tegra.so:system/lib/hw/lights.tegra.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/overlay.tegra.so:system/lib/hw/overlay.tegra.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so
 
@@ -97,9 +96,9 @@ PRODUCT_COPY_FILES += \\
 
 # GPS
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgps.so:system/lib/libgps.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/glgps:system/bin/glgps
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/gps.tegra.so:system/lib/hw/gps.tegra.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/glgps:system/bin/glgps \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/cert/lge.cer:system/etc/cert/lge.cer
 
 # OMX
 PRODUCT_COPY_FILES += \\
