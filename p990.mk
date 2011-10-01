@@ -25,3 +25,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_NAME := p990
 PRODUCT_DEVICE := p990
 PRODUCT_MODEL := LG Optimus 2X
+
+# This is a patched version of libicuuc to include the old symbols
+# needed by glgps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/libicuuc.so:system/lib/libicuuc.so
+
+PRODUCT_PACKAGES += \
+    gps.p990

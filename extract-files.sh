@@ -42,7 +42,7 @@ adb pull /system/etc/wl/rtecdc-mfgtest.bin ../../../vendor/$VENDOR/$DEVICE/propr
 adb pull /system/etc/wl/rtecdc.bin ../../../vendor/$VENDOR/$DEVICE/proprietary/etc/wl
 
 # GPS
-adb pull /system/lib/hw/gps.tegra.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/hw/
+adb pull /system/lib/libgps.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/bin/glgps ../../../vendor/$VENDOR/$DEVICE/proprietary/bin/
 adb pull /system/etc/cert/lge.cer ../../../vendor/$VENDOR/$DEVICE/proprietary/etc/cert/
 
