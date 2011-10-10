@@ -15,7 +15,7 @@
 
 ST_SYSTEM_FS := ext3
 ST_SYSTEM_BLOCK := EMMC
-ST_SYSTEM_DEV := system #/dev/block/mmcblk0p1 #? system
+ST_SYSTEM_DEV := /dev/block/mmcblk0p1
 ST_SYSTEM_NAME := /system
 
 ST_DATA_FS := ext3
@@ -23,7 +23,8 @@ ST_DATA_BLOCK := EMMC
 ST_DATA_DEV := /dev/block/mmcblk0p8
 ST_DATA_NAME := /data
 
+ST_BOOT_METHOD := copy
 ST_BOOT_FS := ext3
 ST_BOOT_BLOCK := EMMC
-ST_BOOT_DEV := boot
+ST_BOOT_DEV := /dev/block/mmcblk0p5
 ST_BOOT_NAME := /boot

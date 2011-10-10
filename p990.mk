@@ -30,6 +30,3 @@ PRODUCT_MODEL := LG Optimus 2X
 # needed by glgps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/libicuuc.so:system/lib/libicuuc.so
-
-PRODUCT_PACKAGES += \
-    gps.p990
