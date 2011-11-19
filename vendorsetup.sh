@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_p990.mk
+add_lunch_combo full_p990-userdebug
