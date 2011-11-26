@@ -62,7 +62,7 @@ public:
     /**
      * return the frame size (number of bytes per sample).
      */
-    uint32_t    frameSize() const { return AudioSystem::popCount(channels())*((format()==AudioSystem::PCM_16_BIT)?sizeof(int16_t):sizeof(int8_t)); }
+    uint32_t    frameSize() const { return AudioSystem::popCount(channels())*((format()==AUDIO_FORMAT_PCM_16_BIT)?sizeof(int16_t):sizeof(int8_t)); }
 
     /**
      * return the audio hardware driver latency in milli seconds.
