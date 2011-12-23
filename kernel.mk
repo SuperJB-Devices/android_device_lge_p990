@@ -4,9 +4,9 @@ BOARD_KERNEL_BASE := 0x10000000
 #Kernel source directory
 ST_KERNEL_DIR := kernel/tegra
 #Kernel config file
-ST_KERNEL_CFG := $(LOCAL_PATH)/superteam_p990_defconfig
+ST_KERNEL_CFG := device/lge/p990/superteam_p990_defconfig
 #Kernel file
-ST_KERNEL_IMG := $(LOCAL_PATH)/kernel
+ST_KERNEL_IMG := device/lge/p990/kernel
 
-PRODUCT_COPY_FILE += $(LOCAL_PATH)/kernel:kernel
+TARGET_PREBUILT_KERNEL := device/lge/p990/kernel
 
