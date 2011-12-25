@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit non-open-source blobs.
-$(call inherit-product-if-exists, vendor/lge/p990/p990-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/p990/p990-vendor-blobs.mk)
 
 # Board-specific init
 PRODUCT_COPY_FILES += \

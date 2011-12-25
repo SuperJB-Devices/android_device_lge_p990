@@ -4,7 +4,7 @@ $(call inherit-product, device/common/gps/gps_eu.mk)
 DEVICE_PACKAGE_OVERLAYS += device/lge/p990/overlay
 
 # Inherit non-open-source blobs.
-$(call inherit-product-if-exists, vendor/lge/p990/p990-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/p990/p990-vendor-blobs.mk)
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \
+    $(LOCAL_PATH)/recovery.fstab:recovery/root/etc/recovery.fstab \
     $(LOCAL_PATH)/init.vsnet:system/bin/init.vsnet \
     $(LOCAL_PATH)/gps_brcm_conf.xml:system/etc/gps_brcm_conf.xml
 
@@ -27,15 +28,12 @@ PRODUCT_COPY_FILES += \
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ueventd.tegra.rc:root/ueventd.tegra.rc \
-    $(LOCAL_PATH)/init_recovery.rc:root/init_recovery.rc
+    $(LOCAL_PATH)/ueventd.tegra.rc:root/ueventd.tegra.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/egl.cfg:system/lib/egl/egl.cfg \
     $(LOCAL_PATH)/prebuilt/rild:system/bin/rild \
-    $(LOCAL_PATH)/prebuilt/setup-recovery:system/bin/setup-recovery \
     $(LOCAL_PATH)/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
 
